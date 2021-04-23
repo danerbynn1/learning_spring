@@ -1,6 +1,7 @@
 package com.example.ec.domain;
 
 import javax.persistence.*;
+import java.io.Serializable;
 import java.util.Objects;
 
 /**
@@ -8,7 +9,7 @@ import java.util.Objects;
  *
  */
 @Entity
-public class Tour {
+public class Tour implements Serializable{
     @Id
     @GeneratedValue
     private Integer id;
@@ -39,11 +40,9 @@ public class Tour {
     private TourPackage tourPackage;
 
     @Column
-    @Enumerated
     private Difficulty difficulty;
 
     @Column
-    @Enumerated(EnumType.STRING)
     private Region region;
 
     public Tour(String title, String description, String blurb, Integer price, String duration, String bullets,
