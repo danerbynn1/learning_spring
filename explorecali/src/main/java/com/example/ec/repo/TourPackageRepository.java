@@ -1,6 +1,7 @@
 package com.example.ec.repo;
 
 import com.example.ec.domain.TourPackage;
+import io.swagger.annotations.Api;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.data.repository.query.Param;
 import org.springframework.data.rest.core.annotation.RepositoryRestResource;
@@ -11,7 +12,9 @@ import java.util.Optional;
 /**
  * Tour Package Repository Interface
  *
+ * Created by Mary Ellen Bowman
  */
+
 @RepositoryRestResource(collectionResourceRel = "packages", path = "packages")
 public interface TourPackageRepository extends CrudRepository<TourPackage, String> {
 
